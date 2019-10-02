@@ -21,6 +21,8 @@ Via yarn:
 $ yarn add -D webpack-export-stats-plugin
 ```
 
+![output](https://i.imgur.com/cAiAXSJ.png)
+
 ### Usage
 
 ```js

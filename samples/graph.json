@@ -1,0 +1,23 @@
+{
+  "/unused.js": {
+    "demo": [
+      "/app.js"
+    ],
+    "xyz": [
+      "/app.js"
+    ]
+  },
+  "/app.css": {
+    "notExist": [
+      "/app.js"
+    ],
+    "xxx": [
+      "/app.js"
+    ]
+  },
+  "/app.js": {
+    "reload": [
+      "/index.js"
+    ]
+  }
+}

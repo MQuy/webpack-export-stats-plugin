@@ -58,7 +58,7 @@ function normalizeProjectGraph(projectGraph, options) {
         if (options.log === "verbose") {
           graph[path][id] = [...deps].map(dep => dep.replace(context, ""));
         } else {
-          graph[path][id] = deps.length;
+          graph[path][id] = deps.size;
         }
       }
     });
@@ -82,12 +82,7 @@ function buildProjectGraph(compilation, includedFileMap, filterFunc) {
 
       const modulePath = convertToUnixPath(module.resource);
 
-      if (
-        module.usedExports !== true &&
-        /^((?!(node_modules)).)*$/.test(modulePath) &&
-        Array.isArray(module.dependencies) &&
-        includedFileMap[modulePath]
-      ) {
+      if (/^((?!(node_modules)).)*$/.test(modulePath) && Array.isArray(module.dependencies) && includedFileMap[modulePath]) {
         module.dependencies.forEach(importDependency => {
           if (importDependency.constructor.name === "HarmonyImportSpecifierDependency" && importDependency.id) {
             const dependencyPath = convertToUnixPath(importDependency.module.resource);
