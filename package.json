@@ -1,0 +1,24 @@
+{
+  "name": "webpack-export-stats-plugin",
+  "version": "0.0.1",
+  "description": "Webpack plugin to output export stats graph",
+  "repository": "https://github.com/MQuy/webpack-export-stats-plugin",
+  "main": "src/index.js",
+  "keywords": [
+    "webpack",
+    "plugin",
+    "export",
+    "stats"
+  ],
+  "author": "MQuy",
+  "license": "MIT",
+  "peerDependencies": {
+    "webpack": "> 3"
+  },
+  "engines": {
+    "node": ">=6.11.5"
+  },
+  "dependencies": {
+    "fast-glob": "^3.0.0"
+  }
+}
