@@ -1,8 +1,7 @@
 const webpack = require("webpack");
-const path = require("path");
 const ExportStatsPlugin = require("webpack-export-stats-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { styleLoader, MiniCssExtractPlugin, miniCssExtractLoader } = require("es6-css-loader");
+const { styleLoader } = require("es6-css-loader");
 
 module.exports = {
   entry: [`webpack-hot-middleware/client?path=http://localhost:3000/__webpack_hmr`, "./index.js"],
@@ -25,7 +24,7 @@ module.exports = {
       {
         test: /\.js|jsx$/,
         loader: "babel-loader",
-        query: {
+        options: {
           babelrc: false,
           presets: [],
           plugins: [

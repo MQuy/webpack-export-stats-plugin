@@ -19,6 +19,6 @@
     "node": ">=6.11.5"
   },
   "dependencies": {
-    "fast-glob": "^3.0.0"
+    "fast-glob": "^3.1.1"
   }
 }
